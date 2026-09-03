@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Atchara Thabthimhin</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, "Noto Sans Thai", sans-serif; background: #f4f7f5; color: #24332b; line-height: 1.6; }
+  header { background: #173f2b; color: white; text-align: center; padding: 48px 20px; }
+  header h1 { margin: 0 0 10px; font-size: 42px; letter-spacing: 1px; }
+  header p { margin: 6px 0; font-size: 18px; opacity: 0.9; }
+  
+  .container { max-width: 1050px; margin: 35px auto; padding: 0 20px; }
+  .card { background: white; border-radius: 18px; padding: 28px; margin-bottom: 24px; box-shadow: 0 5px 20px rgba(0,0,0,.08); }
+  h2 { color: #173f2b; margin-top: 0; border-bottom: 2px solid #eef5f0; padding-bottom: 10px; }
+  
+  .info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .info div { background: #eef5f0; padding: 16px; border-radius: 12px; }
+  
+  /* ช่องข้อมูลการติดต่อ */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; }
+  .contact-item { background: #f8faf9; border: 1px solid #e1ebe4; padding: 12px 16px; border-radius: 10px; font-size: 15px; }
+
+  /* ตารางเกรด */
+  .grade-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  .grade-table th, .grade-table td { border: 1px solid #e0e0e0; padding: 10px 14px; text-align: left; }
+  .grade-table th { background-color: #173f2b; color: white; }
+  .grade-table tr:nth-child(even) { background-color: #f9fbf9; }
+
+  /* Tag Badges สำหรับทักษะ */
+  .tag-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .tag { background: #eef5f0; color: #173f2b; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: bold; }
+  
+  /* รายการประสบการณ์ */
+  ul.exp-list { padding-left: 20px; }
+  ul.exp-list li { margin-bottom: 10px; }
+
+  /* ส่วนปุ่มลิงก์ Portfolio */
+  .portfolio-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; background: #173f2b; color: white; text-decoration: none; padding: 14px 24px; border-radius: 12px; font-weight: bold; font-size: 16px; transition: all 0.2s ease; border: none; cursor: pointer; }
+  .btn:hover { background: #235c40; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(23,63,43,0.3); }
+
+  /* โครงสร้างแสดงผล PDF และ QR Code */
+  .portfolio-preview { display: grid; grid-template-columns: 1fr 220px; gap: 20px; margin-top: 20px; }
+  .pdf { width: 100%; height: 750px; border: 1px solid #ddd; border-radius: 12px; }
+  .qr-box { background: #eef5f0; border-radius: 12px; padding: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: fit-content; }
+  .qr-box img { width: 140px; height: 140px; border-radius: 8px; background: #fff; padding: 6px; margin-top: 10px; border: 1px solid #ccc; }
+
+  footer { text-align: center; padding: 30px; color: #667; font-style: italic; }
+
+  @media(max-width:850px){
+    .portfolio-preview { grid-template-columns: 1fr; }
+    .pdf { height: 500px; }
+  }
+  @media(max-width:700px){
+    header h1 { font-size: 32px; }
+    .btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>PORTFOLIO</h1>
+  <p>แฟ้มสะสมผลงาน</p>
+  <p><strong>นางสาว อัจฉรา ทับทิมหิน (ฟางข้าว)</strong></p>
+  <p>โรงเรียนกระทุ่มแบน “วิเศษสมุทคุณ” | ม.6 (สายวิทยาศาสตร์–คณิตศาสตร์)</p>
+</header>
+
+<div class="container">
+  
+  <!-- ประวัติส่วนตัว & การติดต่อ -->
+  <section class="card">
+    <h2>เกี่ยวกับฉัน (Profile)</h2>
+    <div class="info">
+      <div><b>ชื่อ-สกุล</b><br>นางสาว อัจฉรา ทับทิมหิน (ฟางข้าว)</div>
+      <div><b>การศึกษา</b><br>โรงเรียนกระทุ่มแบน “วิเศษสมุทคุณ”</div>
+      <div><b>แผนการเรียน</b><br>วิทยาศาสตร์–คณิตศาสตร์ (ม.6)</div>
+      <div><b>GPAX (4 ภาคเรียน)</b><br>2.78</div>
+      <div><b>คณะที่สนใจ</b><br>วิศวกรรมศาสตร์</div>
+      <div><b>สาขาที่สนใจ</b><br>วิศวกรรมโยธา</div>
+      <div><b>งานอดิเรก</b><br>ฟังเพลง, ดูหนัง</div>
+      <div><b>ความสามารถพิเศษ</b><br>เล่นดนตรี</div>
+    </div>
+
+    <h3 style="color:#173f2b; margin-top:20px;">ช่องทางการติดต่อ</h3>
+    <div class="contact-grid">
+      <div class="contact-item">📞 <b>เบอร์โทร:</b> 065-383-3404</div>
+      <div class="contact-item">✉️ <b>อีเมล:</b> 164215@wsk.ac.th</div>
+      <div class="contact-item">💬 <b>LINE ID:</b> 065-383-3404</div>
+      <div class="contact-item">📘 <b>Facebook:</b> Atchara Thabthimhin</div>
+      <div class="contact-item">📸 <b>Instagram:</b> Fangkhaw.kk</div>
+    </div>
+  </section>
+
+  <!-- Statement of Purpose -->
+  <section class="card">
+    <h2>แรงบันดาลใจ (Statement of Purpose)</h2>
+    <p>ความสนใจในวิศวกรรมโยธาเริ่มต้นจากครอบครัวที่ประกอบอาชีพรับเหมาก่อสร้าง ทำให้มีโอกาสเห็นการทำงานจริงและเกิดความสงสัยเกี่ยวกับการออกแบบโครงสร้างและอาคาร[cite: 1] เมื่อเข้าสู่ชั้นมัธยมศึกษาตอนปลายจึงตั้งใจเรียนสายวิทยาศาสตร์-คณิตศาสตร์ และค้นหาประสบการณ์ผ่านการเข้าร่วมค่ายวิศวกรรม เช่น <i>RMUTP Civil Camp</i>[cite: 1]</p>
+    <p>นอกจากนี้ ยังได้จัดทำโครงงาน <b>"คอนกรีตผสมวัสดุทดแทน (ใยมะพร้าว เถ้าแกลบ และฝุ่นหิน)"</b> เพื่อศึกษาการพัฒนาวัสดุก่อสร้างที่เป็นมิตรต่อสิ่งแวดล้อม[cite: 1] โดยมีความมุ่งมั่นที่จะนำความรู้ไปต่อยอดธุรกิจรับเหมาก่อสร้างของครอบครัวให้มีมาตรฐาน ปลอดภัย และสร้างประโยชน์ต่อสังคมอย่างยั่งยืน[cite: 1]</p>
+  </section>
+
+  <!-- ผลการเรียน -->
+  <section class="card">
+    <h2>ผลการเรียน (Academic Record)</h2>
+    <p><b>เกรดเฉลี่ยสะสม (GPAX 4 ภาคเรียน):</b> 2.78 | <b>หน่วยกิตรวม:</b> 71.0[cite: 1]</p>
+    <table class="grade-table">
+      <thead>
+        <tr>
+          <th>กลุ่มสาระการเรียนรู้</th>
+          <th>หน่วยกิต</th>
+          <th>เกรดเฉลี่ย (GPA)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ภาษาไทย</td><td>4.0</td><td>2.87</td></tr>
+        <tr><td>คณิตศาสตร์</td><td>12.0</td><td>2.16</td></tr>
+        <tr><td>วิทยาศาสตร์และเทคโนโลยี</td><td>27.0</td><td>2.44</td></tr>
+        <tr><td>สังคมศึกษา ศาสนาและวัฒนธรรม</td><td>10.0</td><td>3.52</td></tr>
+        <tr><td>สุขศึกษาและพลศึกษา</td><td>4.0</td><td>3.93</td></tr>
+        <tr><td>ศิลปะ</td><td>2.0</td><td>3.62</td></tr>
+        <tr><td>การงานอาชีพ</td><td>2.0</td><td>3.87</td></tr>
+        <tr><td>ภาษาต่างประเทศ</td><td>10.0</td><td>2.82</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ทักษะ -->
+  <section class="card">
+    <h2>ทักษะ (Skills)</h2>
+    <p><strong>Hard Skills & Software</strong></p>
+    <div class="tag-group">
+      <span class="tag">Canva</span>
+      <span class="tag">Microsoft Word</span>
+      <span class="tag">PowerPoint</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Python (พื้นฐาน)</span>
+      <span class="tag">KidBright</span>
+    </div>
+    <br>
+    <p><strong>Soft Skills</strong></p>
+    <div class="tag-group">
+      <span class="tag">การคิดวิเคราะห์ (Analytical Thinking)</span>
+      <span class="tag">การแก้ปัญหา (Problem Solving)</span>
+      <span class="tag">การทำงานเป็นทีม (Teamwork)</span>
+      <span class="tag">ความรับผิดชอบ (Responsibility)</span>
+      <span class="tag">การสื่อสาร (Communication)</span>
+    </div>
+  </section>
+
+  <!-- ประสบการณ์เด่น -->
+  <section class="card">
+    <h2>ประสบการณ์เด่น (Academic Workshops & Camps)</h2>
+    <ul class="exp-list">
+      <li><b>RMUTP Civil Camp:</b> ฝึกปฏิบัติการผสมปูนซีเมนต์ หล่อแบบคอนกรีต ทดสอบตัวอย่างคอนกรีต และการตั้งกล้องสำรวจภายใน 30 วินาที[cite: 1]</li>
+      <li><b>ค่ายอัจฉริยภาพวิศวกรรมไฟฟ้า (ม.ศิลปากร):</b> ฝึกต่อวงจรไฟฟ้า การใช้เครื่องมือ และเขียน Coding ควบคุมระบบ (ผลการประเมินระดับดีมาก)[cite: 1]</li>
+      <li><b>FIET LAND ดินแดนแห่งการเรียนรู้ ครั้งที่ 1.5 (มจธ.):</b> เข้าฐานวิศวกรรมโยธา เรียนรู้การใช้เซนเซอร์วัดความสั่นสะเทือนของอาคาร[cite: 1]</li>
+      <li><b>K-Engineering World Tour and Workshop 2025 (สจล.):</b> Workshop วัสดุก่อสร้าง อิฐมวลเบา และการควบคุมคุณภาพงาน[cite: 1]</li>
+      <li><b>Engineering Sparks (ม.เกษตรศาสตร์):</b> Workshop สาขาวิศวกรรมโยธาและทรัพยากรน้ำ[cite: 1]</li>
+      <li><b>K-Engineering World Tour and Competency Challenge 2026 (สจล.):</b> Workshop หัวข้อ "การทดสอบวัสดุวิศวกรรมโยธา [Non-EE]"[cite: 1]</li>
+      <li><b>PIM Young Creative Program รุ่นที่ 4:</b> กิจกรรม Open House ฝึกทักษะการคิดวิเคราะห์ในสายงานวิศวกรรม[cite: 1]</li>
+      <li><b>การอบรมเทคโนโลยีอากาศยานไร้คนขับเพื่อการอนุรักษ์สิ่งแวดล้อม (7 ชั่วโมง):</b> เรียนรู้การใช้โดรนในการสำรวจและเก็บข้อมูล[cite: 1]</li>
+    </ul>
+  </section>
+
+  <!-- กิจกรรมจิตอาสา -->
+  <section class="card">
+    <h2>กิจกรรมจิตอาสา (Volunteer Activities)</h2>
+    <ul class="exp-list">
+      <li><b>ตัวแทนนักเรียน เข้าร่วมพิธีเคารพพระบรมศพ:</b> ปฏิบัติหน้าที่ด้วยความสำรวมและมีระเบียบวินัย[cite: 1]</li>
+      <li><b>อาสาพ้นภัย (พิบัติ) - สภากาชาดไทย:</b> เรียนรู้การเตรียมความพร้อมและรับมือเมื่อเกิดภัยพิบัติ[cite: 1]</li>
+      <li><b>ทอดผ้าป่าเพื่อการศึกษา:</b> ร่วมเตรียมงานและดำเนินกิจกรรมเพื่อสนับสนุนทุนการศึกษาโรงเรียน[cite: 1]</li>
+    </ul>
+  </section>
+
+  <!-- ลิงก์และพรีวิวไฟล์ Portfolio PDF -->
+  <section class="card">
+    <h2>แฟ้มสะสมผลงานฉบับเต็ม (Full Portfolio)</h2>
+    <p>สามารถเปิดดูหรือดาวน์โหลด Portfolio ฉบับเต็ม 9 หน้าได้จากปุ่มและช่องพรีวิวด้านล่างนี้[cite: 1]:</p>
+    
+    <div class="portfolio-actions">
+      <a class="btn" href="Elegant Minimalist A4 Stationery Paper Document (10).pdf" target="_blank" rel="noopener">
+        📄 เปิด Portfolio ฉบับเต็ม (PDF 9 หน้า)
+      </a>
+    </div>
+
+    <div class="portfolio-preview">
+      <iframe class="pdf" src="Elegant Minimalist A4 Stationery Paper Document (10).pdf" title="Portfolio PDF Preview"></iframe>
+      
+      <div class="qr-box">
+        <strong>สแกนดูบนมือถือ</strong>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Elegant Minimalist A4 Stationery Paper Document (10).pdf" alt="QR Code สำหรับสแกนดู Portfolio">
+        <p style="font-size: 12px; color: #555; margin-bottom: 0;">Scan QR Code to View PDF</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>“Every challenge is an opportunity to learn and grow.”[cite: 1]</p>
+  <p>“Every great structure begins with a strong foundation.”[cite: 1]</p>
+</footer>
+
+</body>
+</html>
